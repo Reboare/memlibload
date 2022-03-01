@@ -1,0 +1,14 @@
+[package]
+name = "memlibload"
+version = "0.1.0"
+edition = "2021"
+description = "A memory for loading macos dylib's and bundles in memory without touching disk."
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+thiserror = "1"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+mach_o_sys = "0.1.1"
