@@ -13,11 +13,9 @@ use core::convert::AsRef;
 use thiserror::Error;
 
 
-/// WordCountError enumerates all possible errors returned by this library.
+/// BundleLoadError describes the various errors generated during BUNDLE/DYLIB loading.
 #[derive(Error, Debug)]
 pub enum BundleLoadError {
-    /// Represents an empty source. For example, an empty text file being given
-    /// as input to `count_words()`.
     #[error("Error converting byte array to NSObject")]
     InvalidNSObject,
 
