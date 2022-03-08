@@ -2,7 +2,7 @@
 name = "memlibload"
 version = "0.2.0"
 edition = "2021"
-description = "A memory for loading macos dylib's and bundles in memory without touching disk."
+description = "A memory for loading binaries in memory without touching disk."
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Reboare/memlibload"
 
@@ -17,7 +17,7 @@ mach_o_sys = "0.1.1"
 [target.'cfg(target_os = "windows")'.dependencies]
 winapi = {version="0.3.9", features=["guiddef", "ntdef", "minwindef", "basetsd", "objidlbase", "libloaderapi"]}
 obfstr = "0.3"
-mscoree_sys_2 = {git="https://github.com/Reboare/mscoree-rs"}
-mscorlib-sys = {git="https://github.com/Reboare/mscorlib-rs-sys"}
+mscoree_sys_2 = {git="https://github.com/Reboare/mscoree-rs", version="0.1"}
+mscorlib-sys = {git="https://github.com/Reboare/mscorlib-rs-sys", version="0.1"}
 widestring = "0.5.1"
 oaidl = "0.2.1"
